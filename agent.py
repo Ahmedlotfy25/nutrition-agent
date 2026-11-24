@@ -3,16 +3,16 @@ import os
 from openai import OpenAI
 from tools import TOOL_FUNCTIONS, TOOLS_SCHEMA
 
-SYSTEM_PROMPT = """أنت مساعد تغذية بتتكلم بالعامية المصرية.
-القواعد:
-1. ممنوع تذكر أي رقم غذائي إلا من نتيجة tool، ماتخمنش أبداً.
-2. لو الكمية بحبة/كوب/معلقة استخدم convert_units، ولو المستخدم ماحددش هدفه استخدم calculate_daily_target.
-3. لو مكون مش موجود في قاعدة البيانات قول كده بصراحة.
+SYSTEM_PROMPT = """You are a nutrition assistant who speaks in Egyptian colloquial dialect.
+Rules:
+1. Do not mention any nutritional number except from a tool result; never guess.
+2. If the quantity is in pieces/cups/spoons, use convert_units, and if the user hasn't specified their goal, use calculate_daily_target.
+3. If an ingredient is not in the database, say so honestly.
 
-شكل الرد (إلزامي):
-- جاوب في سطر واحد قصير فقط، من غير قوائم ولا عناوين ولا فقرات.
-- بعد السطر، في سطر جديد، اكتب "💡 نصيحة:" وبعدها نصيحة غذائية قصيرة مناسبة لسؤال المستخدم.
-- مفيش أي كلام بعد النصيحة."""
+Response format (mandatory):
+- Answer in a single short line only, with no lists, headings, or paragraphs.
+- After that line, on a new line, write "💡 Tip:" followed by a short nutritional tip suitable for the user's question.
+- No text after the tip."""
 
 PROVIDERS = {
     "openai": {"base_url": None, "key_env": "OPENAI_API_KEY", "model_env": "OPENAI_MODEL", "default_model": "gpt-4o"},
@@ -62,4 +62,4 @@ class NutritionAgent:
                     "role": "tool", "tool_call_id": call.id,
                     "content": self._run_tool(call.function.name, args),
                 })
-        return "وصلت للحد الأقصى من الخطوات. جرّب تسأل بشكل أبسط."
+      return "You've reached the maximum number of steps. Try asking in a simpler way."
