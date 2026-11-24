@@ -9,13 +9,13 @@ def main():
     provider = os.getenv("PROVIDER", "groq")
     agent = NutritionAgent(provider=provider)
     print(f"🥗 Nutrition Agent | provider={provider} | model={agent.model}")
-    print("اكتب 'exit' للخروج.\n")
+    print("Type 'exit' to quit.\n")
     while True:
-        text = input("إنت: ").strip()
+        text = input("you: ").strip()
         if text.lower() in ("exit", "quit", "خروج"):
             break
         if text:
-            print(f"\nالمساعد: {agent.chat(text)}\n")
+            print(f"\n agent: {agent.chat(text)}\n")
 
 
 if __name__ == "__main__":
