@@ -1,20 +1,20 @@
-"""كل البيانات يدوي. القيم لكل 100 جرام (تقريبية من جداول USDA)."""
+"""All data is manually curated. Values are per 100 grams (approximate from USDA tables)."""
 
 
 INGREDIENTS = {
-    "chicken_breast": {"calories": 165, "protein": 31.0, "carbs": 0.0,  "fat": 3.6},   # مطبوخ
-    "beef_lean":      {"calories": 250, "protein": 26.0, "carbs": 0.0,  "fat": 15.0},  # مطبوخ
-    "salmon":         {"calories": 206, "protein": 22.0, "carbs": 0.0,  "fat": 12.0},  # مطبوخ
-    "tuna_canned":    {"calories": 116, "protein": 26.0, "carbs": 0.0,  "fat": 0.8},   # في مية
+    "chicken_breast": {"calories": 165, "protein": 31.0, "carbs": 0.0,  "fat": 3.6},   
+    "beef_lean":      {"calories": 250, "protein": 26.0, "carbs": 0.0,  "fat": 15.0},  
+    "salmon":         {"calories": 206, "protein": 22.0, "carbs": 0.0,  "fat": 12.0},  
+    "tuna_canned":    {"calories": 116, "protein": 26.0, "carbs": 0.0,  "fat": 0.8}, 
     "egg":            {"calories": 143, "protein": 12.6, "carbs": 0.7,  "fat": 9.5},
-    "rice":           {"calories": 130, "protein": 2.7,  "carbs": 28.0, "fat": 0.3},   # مطبوخ
-    "pasta":          {"calories": 158, "protein": 5.8,  "carbs": 31.0, "fat": 0.9},   # مطبوخ
+    "rice":           {"calories": 130, "protein": 2.7,  "carbs": 28.0, "fat": 0.3},  
+    "pasta":          {"calories": 158, "protein": 5.8,  "carbs": 31.0, "fat": 0.9},  
     "bread_baladi":   {"calories": 270, "protein": 9.0,  "carbs": 55.0, "fat": 1.5},
     "oats":           {"calories": 389, "protein": 16.9, "carbs": 66.0, "fat": 6.9},
-    "potato":         {"calories": 87,  "protein": 1.9,  "carbs": 20.0, "fat": 0.1},   # مسلوق
-    "fava_beans":     {"calories": 110, "protein": 7.6,  "carbs": 19.6, "fat": 0.4},   # فول مطبوخ
-    "lentils":        {"calories": 116, "protein": 9.0,  "carbs": 20.0, "fat": 0.4},   # مطبوخ
-    "chickpeas":      {"calories": 164, "protein": 8.9,  "carbs": 27.4, "fat": 2.6},   # مطبوخ
+    "potato":         {"calories": 87,  "protein": 1.9,  "carbs": 20.0, "fat": 0.1},   
+    "fava_beans":     {"calories": 110, "protein": 7.6,  "carbs": 19.6, "fat": 0.4},   
+    "lentils":        {"calories": 116, "protein": 9.0,  "carbs": 20.0, "fat": 0.4},  
+    "chickpeas":      {"calories": 164, "protein": 8.9,  "carbs": 27.4, "fat": 2.6},   
     "milk":           {"calories": 61,  "protein": 3.2,  "carbs": 4.8,  "fat": 3.3},
     "yogurt":         {"calories": 61,  "protein": 3.5,  "carbs": 4.7,  "fat": 3.3},
     "white_cheese":   {"calories": 264, "protein": 14.0, "carbs": 4.0,  "fat": 21.0},
@@ -85,10 +85,10 @@ SPECIFIC_UNITS = {
 }
 
 ACTIVITY_MULTIPLIERS = {
-    "sedentary": 1.2,    # قليل الحركة
-    "light": 1.375,      # تمرين 1-3 أيام
-    "moderate": 1.55,    # تمرين 3-5 أيام
-    "active": 1.725,     # تمرين 6-7 أيام
+    "sedentary": 1.2,    
+    "light": 1.375,      
+    "moderate": 1.55,    
+    "active": 1.725,     
 }
 
 GOAL_ADJUSTMENT = {"lose": -500, "maintain": 0, "gain": 300}
