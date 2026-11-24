@@ -1,4 +1,4 @@
-"""اختبارات للـ tools من غير API. شغّلها بـ: python test_tools.py"""
+"""Tests for the tools without API. Run them with: python test_tools.py"""
 from tools import *
 
 def test_calories():
